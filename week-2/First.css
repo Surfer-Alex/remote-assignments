@@ -168,7 +168,7 @@ li {
         position: absolute;
         display: flex;
         justify-content: space-around;
-        height:10%;
+        height:5rem;
         background-color: transparent;
         width:25%;
         right: 1rem;
