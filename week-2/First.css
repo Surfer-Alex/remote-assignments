@@ -89,6 +89,7 @@ li {
     align-self: middle;
     margin:6% 2%;
     display: block;
+    
 }
 .bar {
     display: block;
@@ -117,15 +118,23 @@ li {
     margin: 2.5rem 0;
 }
 .nav-bar.active .bar:nth-child(2) {
-    opacity: 0;
+    opacity: 0;     
 }
 
 .nav-bar.active .bar:nth-child(1) {
     transform: translateY(8px) rotate(45deg);
+    position: fixed;
+    right:3%;
+    top: 1em;
+    
 }
 
 .nav-bar.active .bar:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
+    position: fixed;
+    right:3%;
+    top:2em;
+    
 }
 .more {
     display:none;
@@ -156,6 +165,7 @@ li {
 }
 @media only screen and (min-width: 800px) {
     .main-nav {
+        position: absolute;
         display: flex;
         justify-content: space-around;
         height:10%;
