@@ -1,10 +1,12 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const cookieParser = require('cookie-parser');
 
 const app = express();
 
 app.use(bodyParser.urlencoded({ extended: false}));
 app.use(express.static('public'))
+app.use(cookieParser());
 
 app.set('view engine', 'pug');
 
@@ -29,10 +31,35 @@ app.get('/getData',(req,res) => {
     res.render('getData');
 });
 
+//for cookies
+
+app.get('/trackName',(req,res) => {
+    const name = req.cookies.username
+    if (name){
+        res.redirect('/myName');
+    }else{
+        res.render('trackName');
+    }
+});
+app.post('/trackName',(req,res) => {
+    res.cookie('username',req.body.username)
+    res.redirect('/myName');
+    console.log(username);
+});
+app.get('/myName',(req,res) => {
+    const name = req.cookies.username
+    if (name){
+        res.render('myName',{ name }); 
+    }else{
+        res.redirect('/trackName');
+}
+});
 
 
 
 
+
+//for error handle
 app.use((req, res, next) => {
     const err = new Error('Not Found');
     err.status = 404;

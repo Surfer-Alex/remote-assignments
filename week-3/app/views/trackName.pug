@@ -1,0 +1,9 @@
+extends layout.pug 
+
+block content
+    
+    form(action='/trackName',method='post')
+        label 請輸入你的大名: 
+            input(type='text',name='username')
+        button(type='submit') 送出
+    
