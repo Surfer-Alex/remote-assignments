@@ -1,0 +1,42 @@
+.div {
+  display: flex;
+  font-family: sans-serif;
+  font-weight: bold;
+  flex-direction: column;
+  margin: 2em 4em;
+}
+.header {
+  border: solid lightgrey;
+}
+.eader {
+  border: solid lightgrey;
+  padding: 1rem;
+}
+.button {
+  color: #4f4fff;
+  border: none;
+  background-color: transparent;
+  display: flex;
+  align-self: center;
+}
+.move:hover {
+  opacity: 0.3;
+}
+.visi {
+  border-radius: 30px;
+  border: solid lightgrey;
+  margin-left: 1em;
+  padding: 6px;
+}
+.topics {
+  color: #4f4fff;
+  background-color: #deffff;
+  margin-left: 1em;
+  padding: 6px;
+  display: inline-block;
+  margin-right: 10px;
+  border-radius: 30px;
+}
+.para {
+  color: grey;
+}
