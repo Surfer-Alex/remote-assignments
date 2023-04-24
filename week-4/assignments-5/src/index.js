@@ -1,14 +1,6 @@
 import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom";
-
-function Counter({ value, onIncrement }) {
-  return (
-    <div>
-      <button onClick={onIncrement}>+1</button>
-      <span>{value}</span>
-    </div>
-  );
-}
+import Counter from "./components/counter.js";
 
 function App() {
   const [counters, setCounters] = useState([0, 0, 0]);

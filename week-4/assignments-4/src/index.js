@@ -11,6 +11,7 @@ function App() {
   useEffect(() => {
     const getData = async () => {
       try {
+        setLoading(true);
         const res = await fetch(
           `https://api.github.com/orgs/facebook/repos?per_page=5&page=${page}`
         );
